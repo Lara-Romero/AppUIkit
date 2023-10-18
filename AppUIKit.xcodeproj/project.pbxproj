@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */; };
+		61AED6172ADFB87F0041BE8A /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */; };
 		61B8FD062ADEBEEF006F41D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */; };
 		61B8FD082ADEBEEF006F41D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */; };
 		61B8FD0F2ADEBEF4006F41D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */; };
 		61B8FD122ADEBEF4006F41D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B8FD102ADEBEF4006F41D0 /* LaunchScreen.storyboard */; };
-		61B8FD1D2ADEC266006F41D0 /* ListProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8FD1B2ADEC265006F41D0 /* ListProductViewController.swift */; };
-		61B8FD1E2ADEC266006F41D0 /* ListProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B8FD1C2ADEC266006F41D0 /* ListProductViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordViewController.xib; sourceTree = "<group>"; };
 		61B8FD022ADEBEEF006F41D0 /* AppUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61B8FD112ADEBEF4006F41D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61B8FD132ADEBEF4006F41D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61B8FD1B2ADEC265006F41D0 /* ListProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductViewController.swift; sourceTree = "<group>"; };
-		61B8FD1C2ADEC266006F41D0 /* ListProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListProductViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		61B8FD042ADEBEEF006F41D0 /* AppUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				61B8FD192ADEC1FD006F41D0 /* ui */,
+				61B8FD192ADEC1FD006F41D0 /* Pantalla de recordar contraseña */,
 				61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */,
 				61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */,
 				61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */,
@@ -66,21 +66,14 @@
 			path = AppUIKit;
 			sourceTree = "<group>";
 		};
-		61B8FD192ADEC1FD006F41D0 /* ui */ = {
+		61B8FD192ADEC1FD006F41D0 /* Pantalla de recordar contraseña */ = {
 			isa = PBXGroup;
 			children = (
-				61B8FD1A2ADEC210006F41D0 /* list */,
+				61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */,
+				61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */,
 			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		61B8FD1A2ADEC210006F41D0 /* list */ = {
-			isa = PBXGroup;
-			children = (
-				61B8FD1B2ADEC265006F41D0 /* ListProductViewController.swift */,
-				61B8FD1C2ADEC266006F41D0 /* ListProductViewController.xib */,
-			);
-			path = list;
+			name = "Pantalla de recordar contraseña";
+			path = "Pantalla de recordar contraseña";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B8FD122ADEBEF4006F41D0 /* LaunchScreen.storyboard in Resources */,
-				61B8FD1E2ADEC266006F41D0 /* ListProductViewController.xib in Resources */,
+				61AED6172ADFB87F0041BE8A /* PasswordViewController.xib in Resources */,
 				61B8FD0F2ADEBEF4006F41D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,9 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B8FD1D2ADEC266006F41D0 /* ListProductViewController.swift in Sources */,
 				61B8FD062ADEBEEF006F41D0 /* AppDelegate.swift in Sources */,
 				61B8FD082ADEBEEF006F41D0 /* SceneDelegate.swift in Sources */,
+				61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
