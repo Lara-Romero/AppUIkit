@@ -3,30 +3,29 @@ import UIKit
 
 class PasswordViewController: UIViewController {
 
-    @IBOutlet weak var btnContinue: UIButton!
+    @IBOutlet weak var viewContent: UIView!
+    @IBOutlet weak var btnReturn: UIButton!
     @IBOutlet weak var lb1: UILabel!
     @IBOutlet weak var lb2: UILabel!
-    @IBOutlet weak var tfEmail: UITextField!
-    @IBOutlet weak var viewContent: UIView!
-    
+    @IBOutlet weak var tfEmailCustom: UITextField!
+    @IBOutlet weak var btnContinueCustom: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         loadViewP()
+        loadBtnReturn()
         loadButton()
         loadLb1()
         loadLb2()
         loadTfEmail()
-        
     }
     
+ 
     func loadViewP() {
         // Colores con hex
         let color1 = UIColor(red: 0.0/238.0, green: 23.0/238.0, blue: 41.0/238.0, alpha: 1.0)
@@ -40,15 +39,31 @@ class PasswordViewController: UIViewController {
         viewContent.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    func loadBtnReturn() {
+        //btnReturn = UIButton(systemName: "arrow.left")
+        
+        
+//        let button = UIButton(type: .system)
+//
+//        // Agrega un símbolo del sistema al botón
+//        if let image = UIImage(systemName: "star.fill") {
+//            button.setImage(image, for: .normal)
+//        }
+    }
+    
     func loadButton() {
-        btnContinue.setTitle("Continuar", for: .normal)
-        btnContinue.setTitleColor(.blue, for: .normal)
-        btnContinue.backgroundColor = UIColor.white
-        btnContinue.layer.cornerRadius = 15
-        btnContinue.layer.borderWidth = 2
-        btnContinue.layer.borderColor = UIColor.blue.cgColor
-        btnContinue.layer.masksToBounds = true
-
+        btnContinueCustom.setTitle("Continuar", for: .normal)
+        btnContinueCustom.setTitleColor(.blue, for: .normal)
+        btnContinueCustom.backgroundColor = UIColor.white
+        btnContinueCustom.layer.cornerRadius = 15
+        btnContinueCustom.layer.borderWidth = 2
+        btnContinueCustom.layer.borderColor = UIColor.blue.cgColor
+        btnContinueCustom.layer.masksToBounds = true
+    }
+    
+    @IBAction func validateEmail(_ sender: Any) {
+        validateEmail()
+        
     }
     
     func loadLb1() {
@@ -60,7 +75,6 @@ class PasswordViewController: UIViewController {
         lb1.text = "¿No recuerdas tu contraseña?"
         lb1.textAlignment = .center
         lb1.textColor = .white
-        //lb1.font = UIFont.boldSystemFont(ofSize: 20.0)
         lb1.font = UIFont(name: "OpenSans-Bold", size: 20.0)
      
     }
@@ -72,17 +86,42 @@ class PasswordViewController: UIViewController {
         lb2.font = UIFont(name: "Open Sans", size: 16.0)
         
     }
-    
-    func loadTfEmail() {
-        
-        
-    }
-
 }
 
 extension PasswordViewController: UITextFieldDelegate {
+    func loadTfEmail() {
+        tfEmailCustom.delegate = self
+        
+        tfEmailCustom.placeholder = "Email"
+        tfEmailCustom.keyboardType = .emailAddress
+    }
+    
+    func validateEmail() {
+        if let email = tfEmailCustom.text {
+            if isvalidEmail(email: email) {
+                print("Correo valido")
+            } else {
+                print("Correo invalido")
+            }
+        }
+    }
+    
+    func isvalidEmail(email: String) -> Bool {
+        let emailRegExn = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegExn)
+        return emailPred.evaluate(with: email)
+    }
     
 }
 
-
+/*
+ funcion cuando aprietas boton {
+ String correo = recoger lo que esta en el textfield
+ 
+ if(validateEmail(correo)){
+ } else {
+ 
+ 
+ }
+ */
   
