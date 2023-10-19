@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */; };
 		61AED6172ADFB87F0041BE8A /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */; };
+		61B7CBF72AE1267600F876DC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61B7CBF62AE1267600F876DC /* OpenSans-Regular.ttf */; };
+		61B7CBF92AE12AF100F876DC /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61B7CBF82AE12AF100F876DC /* OpenSans-Bold.ttf */; };
 		61B8FD062ADEBEEF006F41D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */; };
 		61B8FD082ADEBEEF006F41D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */; };
 		61B8FD0F2ADEBEF4006F41D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordViewController.xib; sourceTree = "<group>"; };
+		61B7CBF62AE1267600F876DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		61B7CBF82AE12AF100F876DC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		61B8FD022ADEBEEF006F41D0 /* AppUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61B7CBF52AE1263C00F876DC /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				61B7CBF62AE1267600F876DC /* OpenSans-Regular.ttf */,
+				61B7CBF82AE12AF100F876DC /* OpenSans-Bold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		61B8FCF92ADEBEEF006F41D0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		61B8FD042ADEBEEF006F41D0 /* AppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				61B7CBF52AE1263C00F876DC /* fonts */,
 				61B8FD192ADEC1FD006F41D0 /* Pantalla de recordar contraseña */,
 				61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */,
 				61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */,
@@ -136,6 +150,8 @@
 			files = (
 				61B8FD122ADEBEF4006F41D0 /* LaunchScreen.storyboard in Resources */,
 				61AED6172ADFB87F0041BE8A /* PasswordViewController.xib in Resources */,
+				61B7CBF72AE1267600F876DC /* OpenSans-Regular.ttf in Resources */,
+				61B7CBF92AE12AF100F876DC /* OpenSans-Bold.ttf in Resources */,
 				61B8FD0F2ADEBEF4006F41D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
