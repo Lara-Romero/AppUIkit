@@ -12,6 +12,8 @@ class PasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadTfEmail()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +24,7 @@ class PasswordViewController: UIViewController {
         loadButton()
         loadLb1()
         loadLb2()
-        loadTfEmail()
+        //loadTfEmail()
     }
     
  
@@ -40,7 +42,7 @@ class PasswordViewController: UIViewController {
     }
     
     func loadBtnReturn() {
-        //btnReturn = UIButton(systemName: "arrow.left")
+       // btnReturn.setImage(UIImage(systemName: "star.fill"), for: .normal)
         
         
 //        let button = UIButton(type: .system)
@@ -55,7 +57,7 @@ class PasswordViewController: UIViewController {
         btnContinueCustom.setTitle("Continuar", for: .normal)
         btnContinueCustom.setTitleColor(.blue, for: .normal)
         btnContinueCustom.backgroundColor = UIColor.white
-        btnContinueCustom.layer.cornerRadius = 15
+        btnContinueCustom.layer.cornerRadius = 25
         btnContinueCustom.layer.borderWidth = 2
         btnContinueCustom.layer.borderColor = UIColor.blue.cgColor
         btnContinueCustom.layer.masksToBounds = true
