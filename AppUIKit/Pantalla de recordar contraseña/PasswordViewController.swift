@@ -13,10 +13,12 @@ class PasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         setStyles()
         loadTfEmail()
     }
     
+ 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
      
@@ -27,21 +29,33 @@ class PasswordViewController: UIViewController {
    
     }
     
-    func setStyles() {
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setGrandient()
+    }
+    
+    func setGrandient() {
         //Background gradient
         let color1 = UIColor(red: 0.0/238.0, green: 23.0/238.0, blue: 41.0/238.0, alpha: 1.0)
         let color2 = UIColor(red: 24.0/216.0, green: 98.0/216.0, blue: 155.0/216.0, alpha: 1.0)
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = viewContent.bounds
+        gradientLayer.frame = self.view.bounds
         
         gradientLayer.colors = [color1.cgColor, color2.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 1.0, y: 1.0)
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-        viewContent.layer.insertSublayer(gradientLayer, at: 0)
-        
-        
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
+      //  self.view.layer.insertSublayer(gradientLayer, at: 0)
+
+        if gradientLayer.superlayer == nil {
+            self.view.layer.insertSublayer(gradientLayer, at: 0)
+        }
+    }
+    
+    func setStyles() {
+        setGrandient()
         //Button Continue apparience
         btnContinueCustom.setTitle("Continuar", for: .normal)
+
         btnContinueCustom.setTitleColor(UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1), for: .normal)
         btnContinueCustom.backgroundColor = UIColor.white
         btnContinueCustom.layer.cornerRadius = 25
@@ -82,13 +96,26 @@ extension PasswordViewController: UITextFieldDelegate {
         
         tfEmailCustom.placeholder = "Email"
         tfEmailCustom.keyboardType = .emailAddress
+//        tfEmailCustom.addTarget(self, action: #selector(textFieldDidReturn), for: .editingDidEndOnExit)
+//
+//        @ojtc func textFieldDidReturn() {
+//        }
     }
+    
     
     func validateEmail() {
         if let email = tfEmailCustom.text {
             if isvalidEmail(email: email) {
+                let alertController = UIAlertController(title: "Aviso", message: "Correo válido", preferredStyle: .alert)
+                let okAct = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAct)
+                present(alertController, animated: true, completion: nil)
                 print("Correo valido")
             } else {
+                let alertController = UIAlertController(title: "Aviso", message: "Correo no válido", preferredStyle: .alert)
+                let okAct = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAct)
+                present(alertController, animated: true, completion: nil)
                 print("Correo invalido")
             }
         }
@@ -102,14 +129,4 @@ extension PasswordViewController: UITextFieldDelegate {
     
 }
 
-/*
- funcion cuando aprietas boton {
- String correo = recoger lo que esta en el textfield
- 
- if(validateEmail(correo)){
- } else {
- 
- 
- }
- */
   
