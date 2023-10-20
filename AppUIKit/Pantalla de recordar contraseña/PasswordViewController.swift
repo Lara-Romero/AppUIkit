@@ -13,23 +13,22 @@ class PasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setStyles()
         loadTfEmail()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        loadViewP()
-        loadBtnReturn()
-        loadButton()
-        loadLb1()
-        loadLb2()
-        //loadTfEmail()
+     
     }
     
- 
-    func loadViewP() {
-        // Colores con hex
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+   
+    }
+    
+    func setStyles() {
+        //Background gradient
         let color1 = UIColor(red: 0.0/238.0, green: 23.0/238.0, blue: 41.0/238.0, alpha: 1.0)
         let color2 = UIColor(red: 24.0/216.0, green: 98.0/216.0, blue: 155.0/216.0, alpha: 1.0)
         let gradientLayer = CAGradientLayer()
@@ -39,36 +38,19 @@ class PasswordViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 1.0, y: 1.0)
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         viewContent.layer.insertSublayer(gradientLayer, at: 0)
-    }
-    
-    func loadBtnReturn() {
-       // btnReturn.setImage(UIImage(systemName: "star.fill"), for: .normal)
         
         
-//        let button = UIButton(type: .system)
-//
-//        // Agrega un símbolo del sistema al botón
-//        if let image = UIImage(systemName: "star.fill") {
-//            button.setImage(image, for: .normal)
-//        }
-    }
-    
-    func loadButton() {
+        //Button Continue apparience
         btnContinueCustom.setTitle("Continuar", for: .normal)
-        btnContinueCustom.setTitleColor(.blue, for: .normal)
+        btnContinueCustom.setTitleColor(UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1), for: .normal)
         btnContinueCustom.backgroundColor = UIColor.white
         btnContinueCustom.layer.cornerRadius = 25
         btnContinueCustom.layer.borderWidth = 2
-        btnContinueCustom.layer.borderColor = UIColor.blue.cgColor
+        btnContinueCustom.layer.borderColor = UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1).cgColor
         btnContinueCustom.layer.masksToBounds = true
-    }
-    
-    @IBAction func validateEmail(_ sender: Any) {
-        validateEmail()
         
-    }
-    
-    func loadLb1() {
+        
+        //Label1 apparience
         //PAra comprobar si está la fuente en el sistema
        /* UIFont.familyNames.forEach({ familyName in
                    let fontNames = UIFont.fontNames(forFamilyName: familyName)
@@ -78,14 +60,18 @@ class PasswordViewController: UIViewController {
         lb1.textAlignment = .center
         lb1.textColor = .white
         lb1.font = UIFont(name: "OpenSans-Bold", size: 20.0)
-     
-    }
-    
-    func loadLb2() {
+        
+        
+        //Label2 apparience
         lb2.text = "Introduce tu email y te enviaremos un enlace de restablecimiento"
         lb2.textAlignment = .center
         lb2.textColor = .white
         lb2.font = UIFont(name: "Open Sans", size: 16.0)
+    }
+    
+    
+    @IBAction func validateEmail(_ sender: Any) {
+        validateEmail()
         
     }
 }
