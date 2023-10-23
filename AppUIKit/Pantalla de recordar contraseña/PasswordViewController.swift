@@ -52,7 +52,6 @@ private extension PasswordViewController {
         setGrandient()
         //Button Continue apparience
         btnContinueCustom.setTitle("Continuar", for: .normal)
-
         btnContinueCustom.setTitleColor(UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1), for: .normal)
         btnContinueCustom.backgroundColor = UIColor.white
         btnContinueCustom.layer.cornerRadius = 25
