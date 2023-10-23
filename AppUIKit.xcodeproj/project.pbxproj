@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		615C488A2AE65B1200C677B3 /* ExtensionStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C48892AE65B1200C677B3 /* ExtensionStrings.swift */; };
 		615C488F2AE6616D00C677B3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C488D2AE6616D00C677B3 /* RegisterViewController.swift */; };
 		615C48902AE6616D00C677B3 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615C488E2AE6616D00C677B3 /* RegisterViewController.xib */; };
 		61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		615C48892AE65B1200C677B3 /* ExtensionStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionStrings.swift; path = AppUIKit/ExtensionStrings.swift; sourceTree = SOURCE_ROOT; };
 		615C488D2AE6616D00C677B3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		615C488E2AE6616D00C677B3 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
@@ -47,13 +45,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		615C488C2AE6611000C677B3 /* Pantalla de registro */ = {
+		615C488C2AE6611000C677B3 /* pantalla de login */ = {
 			isa = PBXGroup;
 			children = (
 				615C488D2AE6616D00C677B3 /* RegisterViewController.swift */,
 				615C488E2AE6616D00C677B3 /* RegisterViewController.xib */,
 			);
-			path = "Pantalla de registro";
+			path = "pantalla de login";
+			sourceTree = "<group>";
+		};
+		615C48912AE6A44500C677B3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				61B8FD192ADEC1FD006F41D0 /* pantalla de recordar contraseña */,
+				615C488C2AE6611000C677B3 /* pantalla de login */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		615C48922AE6A47600C677B3 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				61B7CBF52AE1263C00F876DC /* fonts */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		61B7CBF52AE1263C00F876DC /* fonts */ = {
@@ -84,12 +99,10 @@
 		61B8FD042ADEBEEF006F41D0 /* AppUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				61B7CBF52AE1263C00F876DC /* fonts */,
-				61B8FD192ADEC1FD006F41D0 /* Pantalla de recordar contraseña */,
-				615C488C2AE6611000C677B3 /* Pantalla de registro */,
+				615C48922AE6A47600C677B3 /* resources */,
+				615C48912AE6A44500C677B3 /* views */,
 				61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */,
 				61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */,
-				615C48892AE65B1200C677B3 /* ExtensionStrings.swift */,
 				61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */,
 				61B8FD102ADEBEF4006F41D0 /* LaunchScreen.storyboard */,
 				61B8FD132ADEBEF4006F41D0 /* Info.plist */,
@@ -97,13 +110,13 @@
 			path = AppUIKit;
 			sourceTree = "<group>";
 		};
-		61B8FD192ADEC1FD006F41D0 /* Pantalla de recordar contraseña */ = {
+		61B8FD192ADEC1FD006F41D0 /* pantalla de recordar contraseña */ = {
 			isa = PBXGroup;
 			children = (
 				61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */,
 				61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */,
 			);
-			name = "Pantalla de recordar contraseña";
+			name = "pantalla de recordar contraseña";
 			path = "Pantalla de recordar contraseña";
 			sourceTree = "<group>";
 		};
@@ -181,7 +194,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615C488A2AE65B1200C677B3 /* ExtensionStrings.swift in Sources */,
 				615C488F2AE6616D00C677B3 /* RegisterViewController.swift in Sources */,
 				61B8FD062ADEBEEF006F41D0 /* AppDelegate.swift in Sources */,
 				61B8FD082ADEBEEF006F41D0 /* SceneDelegate.swift in Sources */,

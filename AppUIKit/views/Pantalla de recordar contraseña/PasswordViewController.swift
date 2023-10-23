@@ -1,6 +1,9 @@
 
 import UIKit
 //import ExtensionStrings
+//
+//let emailRegister = ExtensionStrings()
+//emailRegister.isValidEmail(email: <#T##String#>)
 
 #warning("[Practicas: Meter funcionalidad del teclado para que se vea correctamente cuando se pulsa el textField]")
 #warning("[Practicas: Meter funcionalidad del tab para cuando se pulsa fuera del teclado]")
@@ -135,7 +138,6 @@ extension PasswordViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
 }
 
   
