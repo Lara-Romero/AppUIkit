@@ -1,5 +1,7 @@
 
 import UIKit
+//import ExtensionStrings
+
 #warning("[Practicas: Meter funcionalidad del teclado para que se vea correctamente cuando se pulsa el textField]")
 #warning("[Practicas: Meter funcionalidad del tab para cuando se pulsa fuera del teclado]")
 class PasswordViewController: UIViewController {
@@ -77,8 +79,12 @@ private extension PasswordViewController {
         lb2.textColor = .white
         lb2.font = UIFont(name: "Open Sans", size: 16.0)
         
+        
+        //Tf Email
         tfEmailCustom.placeholder = "Email"
         tfEmailCustom.keyboardType = .emailAddress
+        
+        
     }
     
     private func setGrandient() {
@@ -89,7 +95,6 @@ private extension PasswordViewController {
         
         // Actualiza el marco de la capa del gradiente en viewDidLayoutSubviews
         gradientLayer.frame = self.view.bounds
-        
         gradientLayer.colors = [color1.cgColor, color2.cgColor]
         gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)

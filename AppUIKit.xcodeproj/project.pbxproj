@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		615C488A2AE65B1200C677B3 /* ExtensionStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C48892AE65B1200C677B3 /* ExtensionStrings.swift */; };
 		61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */; };
 		61AED6172ADFB87F0041BE8A /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */; };
 		61B7CBF72AE1267600F876DC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61B7CBF62AE1267600F876DC /* OpenSans-Regular.ttf */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		615C48892AE65B1200C677B3 /* ExtensionStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionStrings.swift; path = AppUIKit/ExtensionStrings.swift; sourceTree = SOURCE_ROOT; };
 		61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordViewController.xib; sourceTree = "<group>"; };
 		61B7CBF62AE1267600F876DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */,
 				61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */,
+				615C48892AE65B1200C677B3 /* ExtensionStrings.swift */,
 			);
 			name = "Pantalla de recordar contraseña";
 			path = "Pantalla de recordar contraseña";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				615C488A2AE65B1200C677B3 /* ExtensionStrings.swift in Sources */,
 				61B8FD062ADEBEEF006F41D0 /* AppDelegate.swift in Sources */,
 				61B8FD082ADEBEEF006F41D0 /* SceneDelegate.swift in Sources */,
 				61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */,
