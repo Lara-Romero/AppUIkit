@@ -13,6 +13,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var lbRegisterCustom: UILabel!
     @IBOutlet weak var btnToAccess: UIButton!
     
+//    let tap = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.tapFunction))
+//    lbForgotPwCustom.isUserInteractionEnabled = true
+//    lbForgotPwCustom.addGestureRecognizer(tap)
+//
+//    @objc func tapFunction(sender:UITapGestureRecognizer) {
+//        print("tap working")
+//    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +47,9 @@ class LoginViewController: UIViewController {
     }
     
     deinit {
-       
+        
     }
+
 }
 
 private extension LoginViewController {
@@ -114,7 +123,7 @@ private extension LoginViewController {
                 }
                 alertController.addAction(okAct)
                 present(alertController, animated: true, completion: nil)
-                print("Correo valido")
+                print("Nombre válido")
             } else {
                 let alertController = UIAlertController(title: "Aviso", message: "El nombre introducido no es compatible", preferredStyle: .alert)
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
@@ -122,7 +131,7 @@ private extension LoginViewController {
                 }
                 alertController.addAction(okAct)
                 present(alertController, animated: true, completion: nil)
-                print("Correo invalido")
+                print("Nombre inválido")
             }
         }
     }
@@ -131,6 +140,34 @@ private extension LoginViewController {
         let RegEx = "\\w{7,18}"
         let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
         return Test.evaluate(with: nombre)
+    }
+    
+    private func validPasswordTf() {
+        if let password = tfPaswordCustom.text {
+            if isValidPassword(password: password) {
+                let alertController = UIAlertController(title: "Aviso", message: "La contraseña es correcta", preferredStyle: .alert)
+                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
+                    self.tfNameCustom.text = ""
+                }
+                alertController.addAction(okAct)
+                present(alertController, animated: true, completion: nil)
+                print("Contraseña correcta")
+            } else {
+                let alertController = UIAlertController(title: "Aviso", message: "La contraseña debe contener números y letras", preferredStyle: .alert)
+                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
+                    self.tfNameCustom.text = ""
+                }
+                alertController.addAction(okAct)
+                present(alertController, animated: true, completion: nil)
+                print("Contraseña incorrecta")
+            }
+        }
+    }
+    //Que contenga numeros y letras
+    private func isValidPassword(password: String) -> Bool {
+        let passRegEx = "(?=[^a-z]*[a-z])[^0-9]*[0-9].*"
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passRegEx)
+        return passwordTest.evaluate(with: password)
     }
     
 //    private func clicKeyboard() {
