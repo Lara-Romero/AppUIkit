@@ -108,15 +108,19 @@ private extension PasswordViewController {
     
     private func validateEmail() {
         if let email = tfEmailCustom.text {
-            if isvalidEmail(email: email) {
+            if isValidEmail(email: email) {
                 let alertController = UIAlertController(title: "Aviso", message: "Correo válido", preferredStyle: .alert)
-                let okAct = UIAlertAction(title: "OK", style: .default, handler: nil)
+                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
+                    self.tfEmailCustom.text = ""
+                }
                 alertController.addAction(okAct)
                 present(alertController, animated: true, completion: nil)
                 print("Correo valido")
             } else {
                 let alertController = UIAlertController(title: "Aviso", message: "Correo no válido", preferredStyle: .alert)
-                let okAct = UIAlertAction(title: "OK", style: .default, handler: nil)
+                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
+                    self.tfEmailCustom.text = ""
+                }
                 alertController.addAction(okAct)
                 present(alertController, animated: true, completion: nil)
                 print("Correo invalido")
@@ -124,7 +128,7 @@ private extension PasswordViewController {
         }
     }
     
-    private func isvalidEmail(email: String) -> Bool {
+    private func isValidEmail(email: String) -> Bool {
         #warning("[Practicas: Esta funcionalidad en una extension de String!! para ser reutilizada ]")
         let emailRegExn = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegExn)
@@ -132,7 +136,8 @@ private extension PasswordViewController {
     }
 }
 
-// MARK: - UITextFieldDelegate
+
+
 extension PasswordViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

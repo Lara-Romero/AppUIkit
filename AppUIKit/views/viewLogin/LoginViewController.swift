@@ -1,7 +1,8 @@
 
+import Foundation
 import UIKit
 
-class RegisterViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet var viewContent: UIView!
     @IBOutlet weak var imageCustom: UIImageView!
@@ -17,6 +18,13 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         setStyles()
+        validNameTf()
+        //clicKeyboard()
+        tfNameCustom.delegate = self
+        tfPaswordCustom.delegate = self
+        
+        tfNameCustom.tag = 1
+        tfPaswordCustom.tag = 2
     }
     
     override func viewDidLayoutSubviews() {
@@ -35,7 +43,7 @@ class RegisterViewController: UIViewController {
     }
 }
 
-private extension RegisterViewController {
+private extension LoginViewController {
     
     private func setStyles() {
         setGrandient()
@@ -45,6 +53,7 @@ private extension RegisterViewController {
         
         //TextField nombre
         tfNameCustom.placeholder = "marisa.perez"
+        tfNameCustom.keyboardType = .default
         
         //TextField contraseña
         tfPaswordCustom.placeholder = "Contraseña"
@@ -95,11 +104,54 @@ private extension RegisterViewController {
             self.view.layer.insertSublayer(gradientLayer, at: 0)
         }
     }
+    
+    private func validNameTf() {
+        if let name = tfNameCustom.text {
+            if isValidName(nombre: name) {
+                let alertController = UIAlertController(title: "Aviso", message: "El nombre introducido es correcto", preferredStyle: .alert)
+                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
+                    self.tfNameCustom.text = ""
+                }
+                alertController.addAction(okAct)
+                present(alertController, animated: true, completion: nil)
+                print("Correo valido")
+            } else {
+                let alertController = UIAlertController(title: "Aviso", message: "El nombre introducido no es compatible", preferredStyle: .alert)
+                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
+                    self.tfNameCustom.text = ""
+                }
+                alertController.addAction(okAct)
+                present(alertController, animated: true, completion: nil)
+                print("Correo invalido")
+            }
+        }
+    }
+    
+    private func isValidName(nombre: String) -> Bool {
+        let RegEx = "\\w{7,18}"
+        let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
+        return Test.evaluate(with: nombre)
+    }
+    
+//    private func clicKeyboard() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard())
+//        view.addGestureRecognizer(tap)
+//    }
+//
+//    @objc func dismissMyKeyboard() {
+//            view.endEditing(true)
+//    }
 }
 
-extension RegisterViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
     }
 }
+
+

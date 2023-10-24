@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		615C488F2AE6616D00C677B3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C488D2AE6616D00C677B3 /* RegisterViewController.swift */; };
-		615C48902AE6616D00C677B3 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615C488E2AE6616D00C677B3 /* RegisterViewController.xib */; };
+		615C488F2AE6616D00C677B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C488D2AE6616D00C677B3 /* LoginViewController.swift */; };
+		615C48902AE6616D00C677B3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615C488E2AE6616D00C677B3 /* LoginViewController.xib */; };
 		61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */; };
 		61AED6172ADFB87F0041BE8A /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */; };
 		61B7CBF72AE1267600F876DC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61B7CBF62AE1267600F876DC /* OpenSans-Regular.ttf */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		615C488D2AE6616D00C677B3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		615C488E2AE6616D00C677B3 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		615C488D2AE6616D00C677B3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		615C488E2AE6616D00C677B3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordViewController.xib; sourceTree = "<group>"; };
 		61B7CBF62AE1267600F876DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -45,20 +45,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		615C488C2AE6611000C677B3 /* pantalla de login */ = {
+		615C488C2AE6611000C677B3 /* viewLogin */ = {
 			isa = PBXGroup;
 			children = (
-				615C488D2AE6616D00C677B3 /* RegisterViewController.swift */,
-				615C488E2AE6616D00C677B3 /* RegisterViewController.xib */,
+				615C488D2AE6616D00C677B3 /* LoginViewController.swift */,
+				615C488E2AE6616D00C677B3 /* LoginViewController.xib */,
 			);
-			path = "pantalla de login";
+			path = viewLogin;
 			sourceTree = "<group>";
 		};
 		615C48912AE6A44500C677B3 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				61B8FD192ADEC1FD006F41D0 /* pantalla de recordar contraseña */,
-				615C488C2AE6611000C677B3 /* pantalla de login */,
+				61B8FD192ADEC1FD006F41D0 /* viewPasword */,
+				615C488C2AE6611000C677B3 /* viewLogin */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -110,13 +110,13 @@
 			path = AppUIKit;
 			sourceTree = "<group>";
 		};
-		61B8FD192ADEC1FD006F41D0 /* pantalla de recordar contraseña */ = {
+		61B8FD192ADEC1FD006F41D0 /* viewPasword */ = {
 			isa = PBXGroup;
 			children = (
 				61AED6142ADFB87F0041BE8A /* PasswordViewController.swift */,
 				61AED6152ADFB87F0041BE8A /* PasswordViewController.xib */,
 			);
-			name = "pantalla de recordar contraseña";
+			name = viewPasword;
 			path = "Pantalla de recordar contraseña";
 			sourceTree = "<group>";
 		};
@@ -183,7 +183,7 @@
 				61B7CBF72AE1267600F876DC /* OpenSans-Regular.ttf in Resources */,
 				61B7CBF92AE12AF100F876DC /* OpenSans-Bold.ttf in Resources */,
 				61B8FD0F2ADEBEF4006F41D0 /* Assets.xcassets in Resources */,
-				615C48902AE6616D00C677B3 /* RegisterViewController.xib in Resources */,
+				615C48902AE6616D00C677B3 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615C488F2AE6616D00C677B3 /* RegisterViewController.swift in Sources */,
+				615C488F2AE6616D00C677B3 /* LoginViewController.swift in Sources */,
 				61B8FD062ADEBEEF006F41D0 /* AppDelegate.swift in Sources */,
 				61B8FD082ADEBEEF006F41D0 /* SceneDelegate.swift in Sources */,
 				61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */,
