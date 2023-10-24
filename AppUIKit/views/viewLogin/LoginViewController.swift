@@ -30,9 +30,6 @@ class LoginViewController: UIViewController {
         clicKeyboard()
         tfNameCustom.delegate = self
         tfPaswordCustom.delegate = self
-        
-        tfNameCustom.tag = 1
-        tfPaswordCustom.tag = 2
     }
     
     override func viewDidLayoutSubviews() {
@@ -49,7 +46,18 @@ class LoginViewController: UIViewController {
     deinit {
         
     }
-
+    
+    
+    @IBAction func validateUser(_ sender: Any) {
+    }
+    
+    @IBAction func validatePassword(_ sender: Any) {
+    }
+    
+    @IBAction func access(_ sender: Any) {
+    }
+    
+    
 }
 
 private extension LoginViewController {
@@ -116,35 +124,23 @@ private extension LoginViewController {
     
     private func validUserTf() {
         if let user = tfNameCustom.text {
-            if isValidUser(nombre: user) {
-                let alertController = UIAlertController(title: "Aviso", message: "El nombre introducido es correcto", preferredStyle: .alert)
+            if user.isValidUser() {
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfNameCustom.text = ""
                 }
-                alertController.addAction(okAct)
-                present(alertController, animated: true, completion: nil)
-                print("Nombre válido")
+                Util.createAlert(title: "Aviso", message: "El nombre de usuario es correcto", actions: [okAct], presentVC: self)
             } else {
-                let alertController = UIAlertController(title: "Aviso", message: "El nombre introducido no es compatible", preferredStyle: .alert)
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfNameCustom.text = ""
                 }
-                alertController.addAction(okAct)
-                present(alertController, animated: true, completion: nil)
-                print("Nombre inválido")
+                Util.createAlert(title: "Aviso", message: "El nombre debe contener al menos una letra (mayúscula o minúscula), un número y tiene que tener al menos 4 caracteres", actions: [okAct], presentVC: self)
             }
         }
     }
     
-    private func isValidUser(nombre: String) -> Bool {
-        let RegEx = "\\w{7,18}"
-        let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
-        return Test.evaluate(with: nombre)
-    }
-    
     private func validPasswordTf() {
         if let password = tfPaswordCustom.text {
-            if isValidPassword(password: password) {
+            if password.isValidPassword() {
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfNameCustom.text = ""
                 }
@@ -153,17 +149,26 @@ private extension LoginViewController {
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfNameCustom.text = ""
                 }
-                Util.createAlert(title: "Aviso", message: "La contraseña debe contener letras y números", actions: [okAct], presentVC: self)
+                Util.createAlert(title: "Aviso", message: "La contraseña debe contener al menos una letra (mayúscula o minúscula), un número, un caracter especial y debe tener al menos 6 caracteres", actions: [okAct], presentVC: self)
             }
         }
     }
     
-    //Que contenga numeros y letras
-    private func isValidPassword(password: String) -> Bool {
-        let passRegEx = "(?=[^a-z]*[a-z])[^0-9]*[0-9].*"
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passRegEx)
-        return passwordTest.evaluate(with: password)
-    }
+//    private func validPasswordTf() {
+//        if let password = tfPaswordCustom.text {
+//            if isValidPassword(password: password) {
+//                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
+//                    self.tfNameCustom.text = ""
+//                }
+//                Util.createAlert(title: "Aviso", message: "La contraseña es correcta", actions: [okAct], presentVC: self)
+//            } else {
+//                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
+//                    self.tfNameCustom.text = ""
+//                }
+//                Util.createAlert(title: "Aviso", message: "La contraseña debe contener letras y números", actions: [okAct], presentVC: self)
+//            }
+//        }
+//    }
     
     private func clicKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissMyKeyboard(_:)))
@@ -173,17 +178,39 @@ private extension LoginViewController {
     @objc func dismissMyKeyboard(_ sender: UITapGestureRecognizer? = nil) {
             view.endEditing(true)
     }
+    
+    
+    
+//    @objc func goToPasswordView() {
+//        let passwordViewController = PasswordViewController()
+//        self.navigationController.pushViewController(passwordViewController, animated: true)
+//    }
+    
+    //    @objc func textFieldDidChange(_ textField: UITextField) {
+    //        if let user = tfNameCustom.text, let password = tfPaswordCustom.text {
+    //            let isUsernameValid = validUserTf(user)
+    //            let isPasswordValid = validPasswordTf(password)
+    //            acces.isEnabled = validUserTf && isPasswordValid
+    //        } else {
+    //            acces.isEnabled = false
+    //        }
+    //    }
+    
 }
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
-            nextField.becomeFirstResponder()
-        } else {
-            textField.resignFirstResponder()
-        }
-        return false
+        textField.resignFirstResponder()
+        return true
     }
 }
+//        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+//            nextField.becomeFirstResponder()
+//        } else {
+//            textField.resignFirstResponder()
+//        }
+//        return false
+//    }
+
 
 

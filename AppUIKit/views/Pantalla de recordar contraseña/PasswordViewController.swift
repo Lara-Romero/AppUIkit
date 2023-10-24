@@ -1,9 +1,5 @@
 
 import UIKit
-//import ExtensionStrings
-//
-//let emailRegister = ExtensionStrings()
-//emailRegister.isValidEmail(email: <#T##String#>)
 
 #warning("[Practicas: Meter funcionalidad del teclado para que se vea correctamente cuando se pulsa el textField]")
 #warning("[Practicas: Meter funcionalidad del tab para cuando se pulsa fuera del teclado]")
@@ -43,7 +39,15 @@ class PasswordViewController: UIViewController {
     // MARK: - Actions
     @IBAction func validateEmail(_ sender: Any) {
         validateEmail()
-        
+    }
+    
+    private func clicKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissMyKeyboard(_:)))
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissMyKeyboard(_ sender: UITapGestureRecognizer? = nil) {
+            view.endEditing(true)
     }
     
 }
@@ -109,21 +113,15 @@ private extension PasswordViewController {
     private func validateEmail() {
         if let email = tfEmailCustom.text {
             if email.isValidEmail() {
-                let alertController = UIAlertController(title: "Aviso", message: "Correo válido", preferredStyle: .alert)
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfEmailCustom.text = ""
                 }
-                alertController.addAction(okAct)
-                present(alertController, animated: true, completion: nil)
-                print("Correo valido")
+                Util.createAlert(title: "Aviso", message: "Email correcto", actions: [okAct], presentVC: self)
             } else {
-                let alertController = UIAlertController(title: "Aviso", message: "Correo no válido", preferredStyle: .alert)
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfEmailCustom.text = ""
                 }
-                alertController.addAction(okAct)
-                present(alertController, animated: true, completion: nil)
-                print("Correo invalido")
+                Util.createAlert(title: "Aviso", message: "Email incorrecto", actions: [okAct], presentVC: self)
             }
         }
     }
