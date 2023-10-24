@@ -17,6 +17,8 @@
 		61B8FD082ADEBEEF006F41D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */; };
 		61B8FD0F2ADEBEF4006F41D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */; };
 		61B8FD122ADEBEF4006F41D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B8FD102ADEBEF4006F41D0 /* LaunchScreen.storyboard */; };
+		61CD72C62AE7E142004C3A64 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD72C52AE7E142004C3A64 /* Util.swift */; };
+		61CD72C82AE7E25A004C3A64 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD72C72AE7E25A004C3A64 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61B8FD112ADEBEF4006F41D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61B8FD132ADEBEF4006F41D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CD72C52AE7E142004C3A64 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		61CD72C72AE7E25A004C3A64 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		615C48922AE6A47600C677B3 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */,
 				61B7CBF52AE1263C00F876DC /* fonts */,
 			);
 			path = resources;
@@ -99,11 +104,11 @@
 		61B8FD042ADEBEEF006F41D0 /* AppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				61CD72C42AE7E106004C3A64 /* common */,
 				615C48922AE6A47600C677B3 /* resources */,
 				615C48912AE6A44500C677B3 /* views */,
 				61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */,
 				61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */,
-				61B8FD0E2ADEBEF4006F41D0 /* Assets.xcassets */,
 				61B8FD102ADEBEF4006F41D0 /* LaunchScreen.storyboard */,
 				61B8FD132ADEBEF4006F41D0 /* Info.plist */,
 			);
@@ -118,6 +123,15 @@
 			);
 			name = viewPasword;
 			path = "Pantalla de recordar contraseña";
+			sourceTree = "<group>";
+		};
+		61CD72C42AE7E106004C3A64 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				61CD72C52AE7E142004C3A64 /* Util.swift */,
+				61CD72C72AE7E25A004C3A64 /* String+Extensions.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +209,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				615C488F2AE6616D00C677B3 /* LoginViewController.swift in Sources */,
+				61CD72C82AE7E25A004C3A64 /* String+Extensions.swift in Sources */,
 				61B8FD062ADEBEEF006F41D0 /* AppDelegate.swift in Sources */,
 				61B8FD082ADEBEEF006F41D0 /* SceneDelegate.swift in Sources */,
+				61CD72C62AE7E142004C3A64 /* Util.swift in Sources */,
 				61AED6162ADFB87F0041BE8A /* PasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

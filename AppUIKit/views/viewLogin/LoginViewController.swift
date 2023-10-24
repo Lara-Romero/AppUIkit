@@ -26,8 +26,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setStyles()
-        validNameTf()
-        //clicKeyboard()
+        //validPasswordTf()
+        clicKeyboard()
         tfNameCustom.delegate = self
         tfPaswordCustom.delegate = self
         
@@ -114,9 +114,9 @@ private extension LoginViewController {
         }
     }
     
-    private func validNameTf() {
-        if let name = tfNameCustom.text {
-            if isValidName(nombre: name) {
+    private func validUserTf() {
+        if let user = tfNameCustom.text {
+            if isValidUser(nombre: user) {
                 let alertController = UIAlertController(title: "Aviso", message: "El nombre introducido es correcto", preferredStyle: .alert)
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfNameCustom.text = ""
@@ -136,7 +136,7 @@ private extension LoginViewController {
         }
     }
     
-    private func isValidName(nombre: String) -> Bool {
+    private func isValidUser(nombre: String) -> Bool {
         let RegEx = "\\w{7,18}"
         let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
         return Test.evaluate(with: nombre)
@@ -145,24 +145,19 @@ private extension LoginViewController {
     private func validPasswordTf() {
         if let password = tfPaswordCustom.text {
             if isValidPassword(password: password) {
-                let alertController = UIAlertController(title: "Aviso", message: "La contraseña es correcta", preferredStyle: .alert)
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfNameCustom.text = ""
                 }
-                alertController.addAction(okAct)
-                present(alertController, animated: true, completion: nil)
-                print("Contraseña correcta")
+                Util.createAlert(title: "Aviso", message: "La contraseña es correcta", actions: [okAct], presentVC: self)
             } else {
-                let alertController = UIAlertController(title: "Aviso", message: "La contraseña debe contener números y letras", preferredStyle: .alert)
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfNameCustom.text = ""
                 }
-                alertController.addAction(okAct)
-                present(alertController, animated: true, completion: nil)
-                print("Contraseña incorrecta")
+                Util.createAlert(title: "Aviso", message: "La contraseña debe contener letras y números", actions: [okAct], presentVC: self)
             }
         }
     }
+    
     //Que contenga numeros y letras
     private func isValidPassword(password: String) -> Bool {
         let passRegEx = "(?=[^a-z]*[a-z])[^0-9]*[0-9].*"
@@ -170,14 +165,14 @@ private extension LoginViewController {
         return passwordTest.evaluate(with: password)
     }
     
-//    private func clicKeyboard() {
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard())
-//        view.addGestureRecognizer(tap)
-//    }
-//
-//    @objc func dismissMyKeyboard() {
-//            view.endEditing(true)
-//    }
+    private func clicKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissMyKeyboard(_:)))
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissMyKeyboard(_ sender: UITapGestureRecognizer? = nil) {
+            view.endEditing(true)
+    }
 }
 
 extension LoginViewController: UITextFieldDelegate {

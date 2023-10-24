@@ -108,7 +108,7 @@ private extension PasswordViewController {
     
     private func validateEmail() {
         if let email = tfEmailCustom.text {
-            if isValidEmail(email: email) {
+            if email.isValidEmail() {
                 let alertController = UIAlertController(title: "Aviso", message: "Correo válido", preferredStyle: .alert)
                 let okAct = UIAlertAction(title: "OK", style: .default) { _ in
                     self.tfEmailCustom.text = ""
@@ -127,16 +127,7 @@ private extension PasswordViewController {
             }
         }
     }
-    
-    private func isValidEmail(email: String) -> Bool {
-        #warning("[Practicas: Esta funcionalidad en una extension de String!! para ser reutilizada ]")
-        let emailRegExn = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegExn)
-        return emailPred.evaluate(with: email)
-    }
 }
-
-
 
 extension PasswordViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
