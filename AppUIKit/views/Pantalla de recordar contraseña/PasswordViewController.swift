@@ -127,6 +127,18 @@ private extension PasswordViewController {
     }
 }
 
+//private func validateEmail() {
+//        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//        if let email = tfEmailCustom.text {
+//            if email.isValidEmail() {
+//                Util.createAlert(title: "Verificar email", message: "Correo válido", actions: [okAction], presentVC: self)
+//            } else {
+//                Util.createAlert(title: "Verificar email", message: "Correo inválido", actions: [okAction], presentVC: self)
+//            }
+//            tfEmailCustom.text = ""
+//        }
+//    }
+
 extension PasswordViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

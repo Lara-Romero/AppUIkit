@@ -154,6 +154,7 @@ private extension LoginViewController {
         }
     }
     
+    
 //    private func validPasswordTf() {
 //        if let password = tfPaswordCustom.text {
 //            if isValidPassword(password: password) {
@@ -178,6 +179,33 @@ private extension LoginViewController {
     @objc func dismissMyKeyboard(_ sender: UITapGestureRecognizer? = nil) {
             view.endEditing(true)
     }
+    
+    //Comprueba que los campos estén cumplimentados para habilitar el botón
+
+//        @objc func textFieldDidChange(_ textField: UITextField) {
+//            if let username = textName.text, let password = textPassword.text {
+//                let isUsernameValid = username.isValidUser()
+//                let isPasswordValid = password.isValidPassword()
+//                acces.isEnabled = isUsernameValid && isPasswordValid
+//                if isUsernameValid && isPasswordValid {
+//                } else {
+//                    acces.isEnabled = false
+//                }
+//            }
+//        }
+
+            
+
+            // Vacía los campos de texto
+
+//            @objc func accesButtonTapped(_ sender: UIButton) {
+//                if acces.isEnabled {
+//                    let okAction = UIAlertAction(title: "", style: .default, handler: nil)
+//                    Util.createAlert(title: "Inicio de sesión", message: "Usuario logado correctamente", actions: [okAction], presentVC: self)
+//                }
+//                textName.text = ""
+//                textPassword.text = ""
+//            }
     
     
     
