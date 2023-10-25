@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="AppUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundSV" destination="LeU-la-HP0" id="1vY-xv-IRs"/>
                 <outlet property="btnToAccess" destination="YhN-Nq-6Gw" id="LLN-TU-pRE"/>
                 <outlet property="imageCustom" destination="6pt-34-XQN" id="VI1-fj-lsM"/>
                 <outlet property="lbAccountCustom" destination="WfK-4X-qPA" id="w3c-t2-tTr"/>
@@ -66,6 +67,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="validateUser:" destination="-1" eventType="editingDidEnd" id="Qnp-1Q-JjT"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M06-sq-7YX">
                                             <rect key="frame" x="0.0" y="81" width="311" height="56"/>
@@ -90,8 +94,8 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-cM-oaj" userLabel="ViewLabel">
                                     <rect key="frame" x="0.0" y="729.66666666666663" width="393" height="20.333333333333371"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-Bq-YQx">
-                                            <rect key="frame" x="155.33333333333334" y="0.0" width="82.666666666666657" height="20.333333333333332"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-Bq-YQx">
+                                            <rect key="frame" x="152.66666666666666" y="0.0" width="87.666666666666657" height="20.333333333333332"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbm-XK-8A7">
                                                     <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
@@ -100,7 +104,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfK-4X-qPA">
-                                                    <rect key="frame" x="41.333333333333314" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                    <rect key="frame" x="46.333333333333343" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

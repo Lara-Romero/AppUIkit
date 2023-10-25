@@ -17,6 +17,7 @@ class PasswordViewController: UIViewController {
         super.viewDidLoad()
         
         setStyles()
+        //clicKeyboard()
         tfEmailCustom.delegate = self
     }
     

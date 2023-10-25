@@ -76,6 +76,13 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		6193B2A02AE9483100FC1059 /* desings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = desings;
+			sourceTree = "<group>";
+		};
 		61B7CBF52AE1263C00F876DC /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +135,7 @@
 		61CD72C42AE7E106004C3A64 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				6193B2A02AE9483100FC1059 /* desings */,
 				61CD72C52AE7E142004C3A64 /* Util.swift */,
 				61CD72C72AE7E25A004C3A64 /* String+Extensions.swift */,
 			);

@@ -15,13 +15,13 @@ public extension String {
     }
     
     func isValidUser() -> Bool {
-        let RegEx = "^(?=.*[A-Za-z])(?=.*\\d).{4,}$"
+        let RegEx = "^.{6}$"
         let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
         return Test.evaluate(with: self)
     }
     
     func isValidPassword() -> Bool {
-        let passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{6,}$"
+        let passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         return passwordPredicate.evaluate(with: self)
     }
