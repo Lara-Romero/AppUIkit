@@ -98,13 +98,7 @@ private extension LoginViewController {
         lbAccountCustom.attributedText = NSMutableAttributedString(string: "Regístrate", attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue])
         
         //Button Access
-        btnToAccess.setTitle("Acceder", for: .normal)
-        btnToAccess.setTitleColor(UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1), for: .normal)
-        btnToAccess.backgroundColor = UIColor.white
-        btnToAccess.layer.cornerRadius = 25
-        btnToAccess.layer.borderWidth = 2
-        btnToAccess.layer.borderColor = UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1).cgColor
-        btnToAccess.layer.masksToBounds = true
+        btnToAccess.bottomButton(title: "Acceder")
     }
     
     private func validUserTf() {

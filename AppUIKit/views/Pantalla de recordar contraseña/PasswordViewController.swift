@@ -59,13 +59,7 @@ private extension PasswordViewController {
     private func setStyles() {
         setGrandient()
         //Button Continue apparience
-        btnContinueCustom.setTitle("Continuar", for: .normal)
-        btnContinueCustom.setTitleColor(UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1), for: .normal)
-        btnContinueCustom.backgroundColor = UIColor.white
-        btnContinueCustom.layer.cornerRadius = 25
-        btnContinueCustom.layer.borderWidth = 2
-        btnContinueCustom.layer.borderColor = UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1).cgColor
-        btnContinueCustom.layer.masksToBounds = true
+        btnContinueCustom.bottomButton(title: "Continuar")
         
         
         //Label1 apparience

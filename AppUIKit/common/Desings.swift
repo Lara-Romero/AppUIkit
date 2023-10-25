@@ -25,3 +25,18 @@ public extension UIViewController {
         }
     }
 }
+
+
+public extension UIButton {
+    func bottomButton(title: String) {
+        setTitle(title, for: .normal)
+        setTitleColor(UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1), for: .normal)
+        backgroundColor = UIColor.white
+        layer.cornerRadius = 25
+        layer.borderWidth = 2
+        layer.borderColor = UIColor(red: 0.02, green: 0.24, blue: 0.4, alpha: 1).cgColor
+        layer.masksToBounds = true
+    }
+}
+
+
