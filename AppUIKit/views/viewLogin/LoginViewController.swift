@@ -13,15 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var lbRegisterCustom: UILabel!
     @IBOutlet weak var btnToAccess: UIButton!
     
-//    let tap = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.tapFunction))
-//    lbForgotPwCustom.isUserInteractionEnabled = true
-//    lbForgotPwCustom.addGestureRecognizer(tap)
-//
-//    @objc func tapFunction(sender:UITapGestureRecognizer) {
-//        print("tap working")
-//    }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +22,10 @@ class LoginViewController: UIViewController {
         clicKeyboard()
         tfNameCustom.delegate = self
         tfPaswordCustom.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        lbForgotPwCustom.isUserInteractionEnabled = true
+        lbForgotPwCustom.addGestureRecognizer(tap)
     }
     
     override func viewDidLayoutSubviews() {
@@ -55,6 +51,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func access(_ sender: Any) {
+        
     }
     
     
@@ -154,61 +151,43 @@ private extension LoginViewController {
         }
     }
     
-    
-//    private func validPasswordTf() {
-//        if let password = tfPaswordCustom.text {
-//            if isValidPassword(password: password) {
-//                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
-//                    self.tfNameCustom.text = ""
-//                }
-//                Util.createAlert(title: "Aviso", message: "La contraseña es correcta", actions: [okAct], presentVC: self)
-//            } else {
-//                let okAct = UIAlertAction(title: "OK", style: .default) { _ in
-//                    self.tfNameCustom.text = ""
-//                }
-//                Util.createAlert(title: "Aviso", message: "La contraseña debe contener letras y números", actions: [okAct], presentVC: self)
-//            }
-//        }
-//    }
-    
     private func clicKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissMyKeyboard(_:)))
         view.addGestureRecognizer(tap)
     }
+    
+    @objc func labelTapped() {
+            let secondViewController = PasswordViewController()
+            navigationController?.pushViewController(secondViewController, animated: true)
+        }
 
     @objc func dismissMyKeyboard(_ sender: UITapGestureRecognizer? = nil) {
             view.endEditing(true)
     }
     
+    // Vacía los campos de texto  -> Comprobar si se puede con un ibaction!!
+    @objc func accesButtonTapped(_ sender: UIButton) {
+        if btnToAccess.isEnabled {
+            let okAction = UIAlertAction(title: "", style: .default, handler: nil)
+            Util.createAlert(title: "Inicio de sesión", message: "Usuario logado correctamente", actions: [okAction], presentVC: self)
+        }
+        tfNameCustom.text = ""
+        tfPaswordCustom.text = ""
+    }
+    
     //Comprueba que los campos estén cumplimentados para habilitar el botón
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let username = tfNameCustom.text, let password = tfPaswordCustom.text {
+            let isUsernameValid = username.isValidUser()
+            let isPasswordValid = password.isValidPassword()
+            btnToAccess.isEnabled = isUsernameValid && isPasswordValid
+            if isUsernameValid && isPasswordValid {
+            } else {
+                btnToAccess.isEnabled = false
+            }
+        }
+    }
 
-//        @objc func textFieldDidChange(_ textField: UITextField) {
-//            if let username = textName.text, let password = textPassword.text {
-//                let isUsernameValid = username.isValidUser()
-//                let isPasswordValid = password.isValidPassword()
-//                acces.isEnabled = isUsernameValid && isPasswordValid
-//                if isUsernameValid && isPasswordValid {
-//                } else {
-//                    acces.isEnabled = false
-//                }
-//            }
-//        }
-
-            
-
-            // Vacía los campos de texto
-
-//            @objc func accesButtonTapped(_ sender: UIButton) {
-//                if acces.isEnabled {
-//                    let okAction = UIAlertAction(title: "", style: .default, handler: nil)
-//                    Util.createAlert(title: "Inicio de sesión", message: "Usuario logado correctamente", actions: [okAction], presentVC: self)
-//                }
-//                textName.text = ""
-//                textPassword.text = ""
-//            }
-    
-    
-    
 //    @objc func goToPasswordView() {
 //        let passwordViewController = PasswordViewController()
 //        self.navigationController.pushViewController(passwordViewController, animated: true)
@@ -232,13 +211,7 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
 }
-//        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
-//            nextField.becomeFirstResponder()
-//        } else {
-//            textField.resignFirstResponder()
-//        }
-//        return false
-//    }
+
 
 
 
