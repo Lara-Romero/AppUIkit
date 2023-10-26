@@ -26,7 +26,6 @@ public extension UIViewController {
     }
 }
 
-
 public extension UIButton {
     func bottomButton(title: String) {
         setTitle(title, for: .normal)
@@ -39,4 +38,21 @@ public extension UIButton {
     }
 }
 
+public extension UILabel {
+    func lbCustom(text: String, textAlignment: NSTextAlignment) {
+        self.text = text
+        self.textAlignment = textAlignment
+        
+        textColor = .white
+        font = UIFont(name: "OpenSans", size: 14.0)
+    }
+}
 
+public extension UITextField {
+    func tfCuston(placeholder: String) {
+        self.placeholder = placeholder
+        
+        keyboardType = .default
+        backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.4)
+    }
+}

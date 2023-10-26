@@ -108,9 +108,9 @@
 		61B8FD042ADEBEEF006F41D0 /* AppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				615C48912AE6A44500C677B3 /* views */,
 				61CD72C42AE7E106004C3A64 /* common */,
 				615C48922AE6A47600C677B3 /* resources */,
-				615C48912AE6A44500C677B3 /* views */,
 				61B8FD052ADEBEEF006F41D0 /* AppDelegate.swift */,
 				61B8FD072ADEBEEF006F41D0 /* SceneDelegate.swift */,
 				61B8FD102ADEBEF4006F41D0 /* LaunchScreen.storyboard */,

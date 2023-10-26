@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="AppUIKit" customModuleProvider="target">
             <connections>
-                <outlet property="backgroundSV" destination="LeU-la-HP0" id="1vY-xv-IRs"/>
+                <outlet property="backgroundSV" destination="LeU-la-HP0" id="D3k-xO-Lel"/>
                 <outlet property="btnToAccess" destination="YhN-Nq-6Gw" id="LLN-TU-pRE"/>
                 <outlet property="imageCustom" destination="6pt-34-XQN" id="VI1-fj-lsM"/>
                 <outlet property="lbAccountCustom" destination="WfK-4X-qPA" id="w3c-t2-tTr"/>

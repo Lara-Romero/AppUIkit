@@ -1,10 +1,11 @@
 
 import UIKit
 
-#warning("[Practicas: Meter funcionalidad del teclado para que se vea correctamente cuando se pulsa el textField]")
-#warning("[Practicas: Meter funcionalidad del tab para cuando se pulsa fuera del teclado]")
-class PasswordViewController: UIViewController {
+
+class PasswordViewController: KeyboardHandlingBaseVC {
+    
     // MARK: - Outlets
+    
     @IBOutlet weak var viewContent: UIView!
     @IBOutlet weak var btnReturn: UIButton!
     @IBOutlet weak var lb1: UILabel!

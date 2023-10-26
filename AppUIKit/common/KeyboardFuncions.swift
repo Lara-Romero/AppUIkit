@@ -7,15 +7,11 @@
 import UIKit
 import Foundation
 
-class ChatVC: KeyboardHandlingBaseVC {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
-
 class KeyboardHandlingBaseVC: UIViewController {
     
     @IBOutlet weak var backgroundSV: UIScrollView!
+    
+//    @IBOutlet weak var backgroundSV: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
