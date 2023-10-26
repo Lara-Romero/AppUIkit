@@ -39,12 +39,20 @@ public extension UIButton {
 }
 
 public extension UILabel {
-    func lbCustom(text: String, textAlignment: NSTextAlignment) {
+    func lbCustom14(text: String, textAlignment: NSTextAlignment) {
         self.text = text
         self.textAlignment = textAlignment
         
         textColor = .white
         font = UIFont(name: "OpenSans", size: 14.0)
+    }
+    
+    func lbCustom10(text: String, textAlignment: NSTextAlignment) {
+        self.text = text
+        self.textAlignment = textAlignment
+        
+        textColor = UIColor(red: 0.192, green: 0.125, blue: 0.125, alpha: 0.58)
+        font = UIFont(name: "OpenSans", size: 10.0)
     }
 }
 
@@ -56,3 +64,4 @@ public extension UITextField {
         backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.4)
     }
 }
+

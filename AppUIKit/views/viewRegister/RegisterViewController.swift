@@ -50,20 +50,24 @@ private extension RegisterViewController {
         setGrandient()
         
         //Label y TextField del nombre
-        lbNameCustom.attributedText = NSAttributedString(string: "NOMBRE", attributes: [NSAttributedString.Key.kern: 0.2])
-        lbNameCustom.lbCustom(text: "NOMBRE", textAlignment: .center)
-        
+        lbNameCustom.lbCustom10(text: "NOMBRE", textAlignment: .left)
         tfNameCustom.tfCuston(placeholder: "Escriba aquí")
         
-        //
-        lbSubnameCustom.lbCustom(text: "APELLIDOS", textAlignment: .center)
-        
+        //Label y TextField apellidos
+        lbSubnameCustom.lbCustom10(text: "APELLIDOS", textAlignment: .left)
         tfSubnameCustom.tfCuston(placeholder: "López Garriguez")
         
-        lbDniPVCustom.lbCustom(text: "IDENTIFICACIÓN", textAlignment: .center)
+        //Label y PickerView del Dni
+        lbDniPVCustom.lbCustom10(text: "IDENTIFICACIÓN", textAlignment: .left)
         
+        //Label y TextField del número de Dni
+        lbDniNumberCustom.lbCustom10(text: "NÚMERO", textAlignment: .left)
+        tfDniNumberCustom.tfCuston(placeholder: "Escriba aquí")
         
+        //Label y Date Picker
+        lbDateCustom.lbCustom10(text: "FECHA NACIMIENTO", textAlignment: .left)
         
+        //Botón Enviar
         btnSendCustom.bottomButton(title: "Enviar")
     }
 }

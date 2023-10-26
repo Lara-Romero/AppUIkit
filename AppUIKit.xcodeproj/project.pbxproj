@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		615485012AEAA4CF004916AE /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 615485002AEAA4CF004916AE /* OpenSans-Semibold.ttf */; };
 		615C488F2AE6616D00C677B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615C488D2AE6616D00C677B3 /* LoginViewController.swift */; };
 		615C48902AE6616D00C677B3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615C488E2AE6616D00C677B3 /* LoginViewController.xib */; };
 		61844B2B2AEA4F6D00A5FC52 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61844B292AEA4F6D00A5FC52 /* RegisterViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		615485002AEAA4CF004916AE /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		615C488D2AE6616D00C677B3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		615C488E2AE6616D00C677B3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		61844B292AEA4F6D00A5FC52 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				61B7CBF62AE1267600F876DC /* OpenSans-Regular.ttf */,
+				615485002AEAA4CF004916AE /* OpenSans-Semibold.ttf */,
 				61B7CBF82AE12AF100F876DC /* OpenSans-Bold.ttf */,
 			);
 			path = fonts;
@@ -216,6 +219,7 @@
 				61AED6172ADFB87F0041BE8A /* PasswordViewController.xib in Resources */,
 				61844B2C2AEA4F6D00A5FC52 /* RegisterViewController.xib in Resources */,
 				61B7CBF72AE1267600F876DC /* OpenSans-Regular.ttf in Resources */,
+				615485012AEAA4CF004916AE /* OpenSans-Semibold.ttf in Resources */,
 				61B7CBF92AE12AF100F876DC /* OpenSans-Bold.ttf in Resources */,
 				61B8FD0F2ADEBEF4006F41D0 /* Assets.xcassets in Resources */,
 				615C48902AE6616D00C677B3 /* LoginViewController.xib in Resources */,

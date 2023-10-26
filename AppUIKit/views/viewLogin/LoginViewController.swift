@@ -71,14 +71,14 @@ private extension LoginViewController {
         tfPaswordCustom.tfCuston(placeholder: "Contraseña")
         
         //Label he olvidado contraseña
-        lbForgotPwCustom.lbCustom(text: "He olvidado mi contraseño", textAlignment: .right)
+        lbForgotPwCustom.lbCustom14(text: "He olvidado mi contraseño", textAlignment: .right)
         lbForgotPwCustom.attributedText = NSMutableAttributedString(string: "He olvidado mi contraseña", attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue])
         
         //Label ¿Aun no tienes cuenta?
-        lbRegisterCustom.lbCustom(text: "¿Aún no tienes cuenta?", textAlignment: .center)
+        lbRegisterCustom.lbCustom14(text: "¿Aún no tienes cuenta?", textAlignment: .center)
         
         //Label Regístrate
-        lbAccountCustom.lbCustom(text: "Regístrate", textAlignment: .center)
+        lbAccountCustom.lbCustom14(text: "Regístrate", textAlignment: .center)
         lbAccountCustom.attributedText = NSMutableAttributedString(string: "Regístrate", attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue])
         
         //Button Access
