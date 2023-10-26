@@ -10,6 +10,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="AppUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="btnSendCustom" destination="6AX-uA-TKh" id="lj8-o4-OgT"/>
+                <outlet property="dpDateCustom" destination="9Mm-JD-zHh" id="9QZ-ZV-dQG"/>
+                <outlet property="lbDateCustom" destination="L85-Je-3C3" id="6qe-Qx-HvT"/>
+                <outlet property="lbDniNumberCustom" destination="XYm-pn-DYy" id="Ihs-aV-gWT"/>
+                <outlet property="lbDniPVCustom" destination="x88-vB-V12" id="2fp-hh-C1G"/>
+                <outlet property="lbNameCustom" destination="E6h-XP-wrF" id="LUr-HY-01I"/>
+                <outlet property="lbSubnameCustom" destination="vWz-96-G3b" id="TuH-Pl-km7"/>
+                <outlet property="pvDniCustom" destination="HXi-JI-Js3" id="Kbr-Ur-lup"/>
+                <outlet property="tfDniNumberCustom" destination="yof-Gf-HVv" id="AMk-l5-Qbd"/>
+                <outlet property="tfNameCustom" destination="ATU-oO-wKO" id="RRJ-Kd-WVw"/>
+                <outlet property="tfSubnameCustom" destination="OMP-g5-yBr" id="YBI-tx-TcR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,13 +37,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0X-Eg-dxQ">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="959"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="964"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wCL-O2-War">
-                                    <rect key="frame" x="17.666666666666657" y="25" width="358" height="852"/>
+                                    <rect key="frame" x="17.666666666666657" y="25" width="358" height="857"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5r8-79-nHU" userLabel="Stack View Nombre">
-                                            <rect key="frame" x="0.0" y="0.0" width="358" height="68.333333333333329"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5r8-79-nHU" userLabel="Stack View Nombre">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="73.333333333333329"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6h-XP-wrF">
                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="20.333333333333332"/>
@@ -41,7 +52,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-oO-wKO">
-                                                    <rect key="frame" x="0.0" y="20.333333333333336" width="358" height="48.000000000000007"/>
+                                                    <rect key="frame" x="0.0" y="25.333333333333336" width="358" height="48.000000000000007"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="358" id="JfR-SC-15U"/>
                                                         <constraint firstAttribute="height" constant="48" id="dlG-S9-ci7"/>
@@ -52,7 +63,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iAh-Pl-F42" userLabel="Stack View Apellidos">
-                                            <rect key="frame" x="0.0" y="78.333333333333343" width="358" height="68.333333333333343"/>
+                                            <rect key="frame" x="0.0" y="83.333333333333343" width="358" height="68.333333333333343"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWz-96-G3b">
                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="20.333333333333332"/>
@@ -61,7 +72,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMP-g5-yBr">
-                                                    <rect key="frame" x="0.0" y="20.333333333333343" width="358" height="48"/>
+                                                    <rect key="frame" x="0.0" y="20.333333333333329" width="358" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="0E1-xM-2nV"/>
                                                         <constraint firstAttribute="width" constant="358" id="cFC-Yf-Ea8"/>
@@ -72,7 +83,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-g1-go6" userLabel="Stack View DNI">
-                                            <rect key="frame" x="0.0" y="156.66666666666663" width="358" height="236.33333333333337"/>
+                                            <rect key="frame" x="0.0" y="161.66666666666663" width="358" height="236.33333333333337"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MBT-m4-zbP" userLabel="Stack View PickerV">
                                                     <rect key="frame" x="0.0" y="0.0" width="112" height="236.33333333333334"/>
@@ -111,7 +122,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pn3-Sp-E3C" userLabel="Stack View Fecha de Nacimiento">
-                                            <rect key="frame" x="0.0" y="403" width="358" height="449"/>
+                                            <rect key="frame" x="0.0" y="408" width="358" height="449"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L85-Je-3C3">
                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="20.333333333333332"/>
@@ -127,7 +138,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AX-uA-TKh">
-                                    <rect key="frame" x="126.66666666666669" y="897" width="140" height="52"/>
+                                    <rect key="frame" x="126.66666666666669" y="902" width="140" height="52"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="52" id="NWd-1b-uX0"/>
                                         <constraint firstAttribute="width" constant="140" id="SXq-nx-Ayr"/>
